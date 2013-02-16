@@ -1,4 +1,18 @@
 <h1>Listing equipment</h1>
+ <script type="text/javascript">
+  function populate()
+  { book = Spreadsheet.open 'CHI-OCP-AHU-1001_test.xls';
+     sheet1 = book.worksheet 0;
+       for (var i=0;i<20;i++)
+         { equipments=Equipment.new;
+          row=sheet1.row(i);
+          equipments[i].uniqueid = row[0];
+        }
+  }
+
+  
+  </script>
+  <button type="button" onclick="populate()">Populate from excel file</button>
 
 <table>
   <tr>

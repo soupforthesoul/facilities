@@ -1,9 +1,11 @@
+require 'spreadsheet'
 class EquipmentController < ApplicationController
   # GET /equipment
   # GET /equipment.json
   def index
     @equipment = Equipment.all
-
+     
+         
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @equipment }
