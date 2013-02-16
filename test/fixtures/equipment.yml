@@ -1,0 +1,43 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  uniqueid: MyString
+  barcode: MyString
+  assetprofile: MyString
+  building: MyString
+  floor: MyString
+  room: MyString
+  department: MyString
+  system: MyString
+  partof: MyString
+  manufacturer: MyString
+  model: MyString
+  serial: MyString
+  warrstart: 2013-02-16
+  warrend: 2013-02-16
+  instructions: false
+  components: false
+  pmschedule: MyString
+  partnumber: MyString
+  url: MyString
+
+two:
+  uniqueid: MyString
+  barcode: MyString
+  assetprofile: MyString
+  building: MyString
+  floor: MyString
+  room: MyString
+  department: MyString
+  system: MyString
+  partof: MyString
+  manufacturer: MyString
+  model: MyString
+  serial: MyString
+  warrstart: 2013-02-16
+  warrend: 2013-02-16
+  instructions: false
+  components: false
+  pmschedule: MyString
+  partnumber: MyString
+  url: MyString

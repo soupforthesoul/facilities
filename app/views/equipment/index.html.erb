@@ -1,0 +1,59 @@
+<h1>Listing equipment</h1>
+
+<table>
+  <tr>
+    <th>Uniqueid</th>
+    <th>Barcode</th>
+    <th>Assetprofile</th>
+    <th>Building</th>
+    <th>Floor</th>
+    <th>Room</th>
+    <th>Department</th>
+    <th>System</th>
+    <th>Partof</th>
+    <th>Manufacturer</th>
+    <th>Model</th>
+    <th>Serial</th>
+    <th>Warrstart</th>
+    <th>Warrend</th>
+    <th>Instructions</th>
+    <th>Components</th>
+    <th>Pmschedule</th>
+    <th>Partnumber</th>
+    <th>Url</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @equipment.each do |equipment| %>
+  <tr>
+    <td><%= equipment.uniqueid %></td>
+    <td><%= equipment.barcode %></td>
+    <td><%= equipment.assetprofile %></td>
+    <td><%= equipment.building %></td>
+    <td><%= equipment.floor %></td>
+    <td><%= equipment.room %></td>
+    <td><%= equipment.department %></td>
+    <td><%= equipment.system %></td>
+    <td><%= equipment.partof %></td>
+    <td><%= equipment.manufacturer %></td>
+    <td><%= equipment.model %></td>
+    <td><%= equipment.serial %></td>
+    <td><%= equipment.warrstart %></td>
+    <td><%= equipment.warrend %></td>
+    <td><%= equipment.instructions %></td>
+    <td><%= equipment.components %></td>
+    <td><%= equipment.pmschedule %></td>
+    <td><%= equipment.partnumber %></td>
+    <td><%= equipment.url %></td>
+    <td><%= link_to 'Show', equipment %></td>
+    <td><%= link_to 'Edit', edit_equipment_path(equipment) %></td>
+    <td><%= link_to 'Destroy', equipment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Equipment', new_equipment_path %>
