@@ -1,5 +1,7 @@
 Facilities::Application.routes.draw do
-  resources :equipment
+  resources :equipment do
+    collection { post :import }
+  end
 
 
   # The priority is based upon order of creation:

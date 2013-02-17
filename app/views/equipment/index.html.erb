@@ -9,10 +9,12 @@
           equipments[i].uniqueid = row[0];
         }
   }
+ </script>
 
   
-  </script>
-  <button type="button" onclick="populate()">Populate from excel file</button>
+
+ 
+  
 
 <table>
   <tr>
@@ -68,6 +70,14 @@
 <% end %>
 </table>
 
+<button type="button" onclick="populate()">Populate from excel file</button>
 <br />
+
+<h2>Import Equipment</h2>
+
+<%= form_tag import_equipment_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Import" %>
+<% end %>
 
 <%= link_to 'New Equipment', new_equipment_path %>

@@ -1,7 +1,15 @@
-require 'spreadsheet'
+
 class EquipmentController < ApplicationController
   # GET /equipment
   # GET /equipment.json
+  def import
+
+  Equipment.import(params[:file])
+  
+  redirect_to root_url, notice: "Equipment imported."
+
+  end
+
   def index
     @equipment = Equipment.all
      
