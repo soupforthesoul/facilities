@@ -1,3 +1,31 @@
 // Place all the styles related to the Equipment controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+html {
+	background-color: #CCFFFF;
+
+	font-family: verdana , sans-serif;
+
+
+}
+
+h1, h2 {
+	font-style: verdana , sans-serif;
+}
+
+
+table { 
+	border: 1px solid black;
+}
+
+th { font-style: verdana , sans-serif;
+	font-weight:bold;
+	border: 2px solid black;
+}
+
+td { font-style: verdana , sans-serif;
+	border: 1px solid black;
+}
+
+

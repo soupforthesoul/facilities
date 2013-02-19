@@ -65,7 +65,7 @@ Equipment.delete_all
     <td><%= equipment.components %></td>
     <td><%= equipment.pmschedule %></td>
     <td><%= equipment.partnumber %></td>
-    <td><%= equipment.url %></td>
+    <td><%= link_to equipment.url, equipment.url  %></td>
     <td><%= link_to 'Show', equipment %></td>
     <td><%= link_to 'Edit', edit_equipment_path(equipment) %></td>
     <td><%= link_to 'Destroy', equipment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
