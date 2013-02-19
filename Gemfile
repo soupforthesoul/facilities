@@ -11,6 +11,8 @@ gem 'sqlite3'
 
 gem 'roo'
 gem 'rspec'
+
+gem 'pg'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
