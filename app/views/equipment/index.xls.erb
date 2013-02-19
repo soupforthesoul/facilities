@@ -1,25 +1,4 @@
-<script type="text/javascript">
-function delete_table ()
-{
- 
-window.location.reload();
-Equipment.delete_all
-}
-</script>
-
-<h1>Listing equipment</h1>
- 
-  
-
- <p>
-  Download:
-  <%= link_to "CSV", equipment_index_path(format: "csv") %> |
-  <%= link_to "Excel", equipment_index_path(format: "xls") %> | 
-  <%= link_to "ExcelX", equipment_index_path(format: "xlsx") %>
-</p>
-  
-
-<table>
+<table border="1">
   <tr>
     <th>Uniqueid</th>
     <th>Barcode</th>
@@ -40,9 +19,7 @@ Equipment.delete_all
     <th>Pmschedule</th>
     <th>Partnumber</th>
     <th>Url</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    
   </tr>
 
 <% @equipment.each do |equipment| %>
@@ -66,21 +43,7 @@ Equipment.delete_all
     <td><%= equipment.pmschedule %></td>
     <td><%= equipment.partnumber %></td>
     <td><%= equipment.url %></td>
-    <td><%= link_to 'Show', equipment %></td>
-    <td><%= link_to 'Edit', edit_equipment_path(equipment) %></td>
-    <td><%= link_to 'Destroy', equipment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  
   </tr>
 <% end %>
 </table>
-
-<button type="button" onclick=" delete_table()">Delete Entire Table</button> 
-<br />
-
-<h2>Import Equipment</h2>
-
-<%= form_tag import_equipment_index_path, multipart: true do %>
-  <%= file_field_tag :file %>
-  <%= submit_tag "Import" %>
-<% end %>
-
-<%= link_to 'New Equipment', new_equipment_path %>

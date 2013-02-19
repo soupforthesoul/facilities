@@ -1,0 +1,33 @@
+C:/RailsInstaller/Ruby1.9.3/bin/ruby.exe extconf.rb
+checking for rb_enc_get() in ruby/encoding.h... yes
+checking for iconv() in iconv.h... no
+checking for iconv() in -liconv... no
+*** extconf.rb failed ***
+Could not create Makefile due to some reason, probably lack of
+necessary libraries and/or headers.  Check the mkmf.log file for more
+details.  You may need configuration options.
+
+Provided configuration options:
+	--with-opt-dir
+	--without-opt-dir
+	--with-opt-include
+	--without-opt-include=${opt-dir}/include
+	--with-opt-lib
+	--without-opt-lib=${opt-dir}/lib
+	--with-make-prog
+	--without-make-prog
+	--srcdir=.
+	--curdir
+	--ruby=C:/RailsInstaller/Ruby1.9.3/bin/ruby
+	--with-iconv-dir
+	--without-iconv-dir
+	--with-iconv-include
+	--without-iconv-include=${iconv-dir}/include
+	--with-iconv-lib
+	--without-iconv-lib=${iconv-dir}/lib
+	--enable-config-charset
+	--disable-config-charset
+	--with-config-charset
+	--without-config-charset
+	--with-iconvlib
+	--without-iconvlib

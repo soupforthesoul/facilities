@@ -4,19 +4,22 @@ class EquipmentController < ApplicationController
   # GET /equipment.json
   def import
 
-  Equipment.import(params[:file])
-  
-  redirect_to root_url, notice: "Equipment imported."
+   Equipment.import(params[:file])
 
+   redirect_to root_url, notice: "Equipment imported."
+    
   end
 
   def index
     @equipment = Equipment.all
-     
-         
+    
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @equipment }
+      format.csv { send_data Equipment.to_csv }
+      format.xls # { send_data @equipment.to_csv(col_sep: "\t") }
+      format.xlsx # { send_data @equipment.to_csv(col_sep: "\t") }
     end
   end
 
