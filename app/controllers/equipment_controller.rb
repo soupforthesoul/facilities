@@ -93,4 +93,12 @@ class EquipmentController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def destroyall
+    Equipment.delete_all
+    
+
+    redirect_to root_url, notice: "Everything deleted."
+    
+  end
 end

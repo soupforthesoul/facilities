@@ -1,15 +1,9 @@
-<script type="text/javascript">
-function delete_table ()
-{
- 
-window.location.reload();
-Equipment.delete_all
-}
-</script>
+
 
 <h1>Listing equipment</h1>
  
   
+
 
  <p>
   Download:
@@ -73,7 +67,11 @@ Equipment.delete_all
 <% end %>
 </table>
 
-<button type="button" onclick=" delete_table()">Delete Entire Table</button> 
+ <%= link_to 'Delete All', { :controller => 'equipment', :action => 'destroyall' }, :class => 'someclass', data: { confirm: 'Are you sure?' } %>
+
+<%= button_to "Delete All Test", destroyall_equipment_index_path, :id => "destroyall-btn",
+      :class => "inbox-sf-add-btn tip", :method => :get, data: { confirm: 'Are you sure?' } %>
+
 <br />
 
 <h2>Import Equipment</h2>

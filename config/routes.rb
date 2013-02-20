@@ -1,6 +1,7 @@
 Facilities::Application.routes.draw do
   resources :equipment do
     collection { post :import }
+    collection { get :destroyall }
   end
 
 
